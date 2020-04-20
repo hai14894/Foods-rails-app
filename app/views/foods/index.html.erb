@@ -2,8 +2,15 @@
 
     
 <%for food in @foods%>
-<li> <%=food.id%> <%=food.name%>-<%=food.price%></li>
+    <li style="display: flex;"> <%=food.id%> 
+        <%=food.name%>-<%=food.price%>
+        <form action="<%=show_path(food.id)%>" method="POST">
+        <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+        <input type="hidden" name="_method" value="delete" />
+        <button type="submit">DELETE</button>
+        </form>
+
+    </li>
  
 <%end%>
 
-</ul>

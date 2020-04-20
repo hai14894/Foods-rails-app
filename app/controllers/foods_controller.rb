@@ -25,7 +25,7 @@ class FoodsController < ApplicationController
         redirect_to show_path(params["id"])
     end
 
-    def destroy 
+    def delete
         destroyed_food = Food.find(params["id"]).destroy
         redirect_to index_path
     end

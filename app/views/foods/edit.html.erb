@@ -1,0 +1,11 @@
+<form action="/foods/<%=@food.id %>" method= "POST">
+    <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+     <input type="hidden" name="_method" value="put" />
+   
+ name: <input type="text" name="name" value="<%=@food.name%>"/>
+ <br>
+ price: <input type="number" name="price" value="<%=@food.price%>"/>
+ <br> 
+ <button type="submit">Submit</button>
+
+</form>

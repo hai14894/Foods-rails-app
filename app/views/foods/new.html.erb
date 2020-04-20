@@ -1,0 +1,10 @@
+<form action="<%=index_path%>" method="POST">
+
+ <input type="hidden" value="<%= form_authenticity_token %>" name="authenticity_token" />
+ name: <input placeholder="food name" type="text" name="name"/>
+ <br>
+ price: <input placeholder="price" type="number" name="price"  />
+ <br> 
+ <button type="submit">Submit</button>
+
+</form>

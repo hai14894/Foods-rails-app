@@ -8,7 +8,7 @@ class FoodsController < ApplicationController
         @showfood = Food.find(params["id"])
     end
 
-    def new #cant use numbers with 0s in it
+    def new 
 
     end
 
@@ -25,7 +25,7 @@ class FoodsController < ApplicationController
         redirect_to show_path(params["id"])
     end
 
-    def delete
+    def destroy
         destroyed_food = Food.find(params["id"]).destroy
         redirect_to index_path
     end
